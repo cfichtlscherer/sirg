@@ -3,19 +3,24 @@ language: python
 dist: xenial
 
 python: 
-    - 3.7
+  - 3.7
 
 branches:
-    only:
-        - master
+  only:
+  - master
 
 before_install:
-  - python --version
-  - pip install -U pip
-  - python setup.py install
+  - pip install networkx
+          #  - python --version
+          #  - pip install -U pip
+          #  - python setup.py install
 
 install:
     - pip install -e .
 
 script:
-    - python -m pytest --color=yes 
+    - python -m pytest --color=yes
+
+after_success:
+  - codecov
+ 
