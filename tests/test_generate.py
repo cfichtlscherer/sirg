@@ -29,18 +29,7 @@ def test_random_connected_graph_1():
     assert (number_nodes == 50) and (number_edges == (50 * (50-1)) / 2)
 
 
-def test_density():
-
-    G = nx.Graph()
-    G.add_nodes_from(range(10))
-    G.add_edges_from([(1,2), (1,5), (9,3), (4,5)])
-
-    density = sirg.generate.density(G)
-
-    assert density == 0.4
-
-
-def test_random_connected_graph_1():
+def test_random_connected_graph_2():
     """
     test the error message
     """
@@ -51,5 +40,16 @@ def test_random_connected_graph_1():
     g = sirg.generate.random_connected_graph(n, p)
    
     assert g == False
+
+
+def test_density():
+
+    G = nx.Graph()
+    G.add_nodes_from(range(10))
+    G.add_edges_from([(1,2), (1,5), (9,3), (4,5)])
+
+    density = sirg.generate.density(G)
+
+    assert density == 0.4
 
 
