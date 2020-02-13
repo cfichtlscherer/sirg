@@ -21,8 +21,11 @@ install:
 
 script:
     - python -m pytest --color=yes
-    - coverage run test_generate.py
+      #    - coverage run test_generate.py
 
-after_success:
-  - codecov
+codecov:
+  token: a82a0283-f1a7-4aa5-9de6-b0e13ab862f7
+
+#after_success:
+#  - codecov
  
