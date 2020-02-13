@@ -13,7 +13,8 @@ install:
   - pip install -e .[test]
 
 script:
-  - coverage run -m pytest
+  - python -m pytest --color=yes --cov=torsk
+    #- coverage run -m pytest
 
 after_success:
     bash <(curl -s https://codecov.io/bash)
