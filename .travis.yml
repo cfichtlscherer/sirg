@@ -11,7 +11,7 @@ branches:
 
 before_install:
   - pip install networkx
-  - pip install coverage
+  - pip install codecov
           #  - python --version
           #  - pip install -U pip
           #  - python setup.py install
