@@ -21,7 +21,7 @@ install:
 
 script:
     - python -m pytest --color=yes
-    - coverage run tests.py
+    - coverage run test_generate.py
 
 after_success:
   - codecov
