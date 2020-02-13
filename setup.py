@@ -1,5 +1,13 @@
 import setuptools
 
+INSTALL_REQUIRES = [
+    'networkx'
+]
+
+TEST_REQUIRES = [
+    'pytest', 'coverage',
+]
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
