@@ -18,7 +18,7 @@ def test_random_connected_graph_1():
     we test if the number of nodes and edges is correct.
     """
 
-    n = 50
+    n = 56 # check if travis will recognize
     p = 1
     
     g = sirg.generate.random_connected_graph(n, p)
