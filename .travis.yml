@@ -14,4 +14,4 @@ install:
     - pip install -e .[test]
 
 script:
-    - python -m pytest --color=yes --cov=torsk
+    - python -m pytest --color=yes # --cov=torsk
