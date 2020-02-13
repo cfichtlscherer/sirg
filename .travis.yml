@@ -24,9 +24,10 @@ script:
         #- python -m pytest --color=yes
       #    - coverage run test_generate.py
 
-codecov:
-  token: a82a0283-f1a7-4aa5-9de6-b0e13ab862f7
+    #codecov:
+    #token: a82a0283-f1a7-4aa5-9de6-b0e13ab862f7
 
-#after_success:
-#  - codecov
+after_success:
+    bash <(curl -s https://codecov.io/bash)
+       #  - codecov
  
