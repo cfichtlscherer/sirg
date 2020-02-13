@@ -1,13 +1,5 @@
 import setuptools
 
-INSTALL_REQUIRES = [
-    'networkx'
-]
-
-TEST_REQUIRES = [
-    'pytest', 'coverage',
-]
-
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -19,6 +11,18 @@ setuptools.setup(
     description="Running SIR on random graphs",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    install_requires=
+        [
+        "networkx"
+        ],
+    extras_require=
+        {
+        "test": [
+            "pytest",
+            "coverage",
+            "pytest-cov",
+            "pytest-flake8"]
+        },
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

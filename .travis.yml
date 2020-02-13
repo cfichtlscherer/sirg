@@ -9,25 +9,12 @@ branches:
   only:
   - master
 
-before_install:
-  - pip install networkx
-  - pip install codecov
-          #  - python --version
-          #  - pip install -U pip
-          #  - python setup.py install
-
 install:
-  - pip install -e .
+  - pip install -e .[test]
 
 script:
   - coverage run -m pytest
-        #- python -m pytest --color=yes
-      #    - coverage run test_generate.py
-
-    #codecov:
-    #token: a82a0283-f1a7-4aa5-9de6-b0e13ab862f7
 
 after_success:
     bash <(curl -s https://codecov.io/bash)
-       #  - codecov
  
