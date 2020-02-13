@@ -9,6 +9,11 @@ branches:
     only:
         - master
 
+before_install:
+  - python --version
+  - pip install -U pip
+  - python setup.py install
+
 install:
     - pip install -e .
 
