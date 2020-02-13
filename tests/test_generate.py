@@ -26,7 +26,7 @@ def test_random_connected_graph_1():
     number_nodes = len(g.nodes())
     number_edges = len(g.edges())
 
-    assert (number_nodes == 50) and (number_edges == (50 * (50-1))/2)
+    assert (number_nodes == 50) and (number_edges == (50 * (50-1)) / 2)
 
 
 def test_density():
@@ -38,3 +38,18 @@ def test_density():
     density = sirg.generate.density(G)
 
     assert density == 0.4
+
+
+def test_random_connected_graph_1():
+    """
+    test the error message
+    """
+
+    n = 10
+    p = 0
+    
+    g = sirg.generate.random_connected_graph(n, p)
+   
+    assert g == False
+
+

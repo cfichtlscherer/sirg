@@ -20,7 +20,7 @@ def random_connected_graph(n, p):
         if nx.is_connected(G) == True:
             return G
     print("ERROR: Over 100 000 unsuccesfull iterations")
-
+    return False
 
 def density(G):
     """ returns the density of the graph"""
