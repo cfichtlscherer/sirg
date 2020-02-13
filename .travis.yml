@@ -13,7 +13,7 @@ install:
   - pip install -e .[test]
 
 script:
-  - python -m pytest --color=yes --cov=torsk
+  - python -m pytest --color=yes --cov=sirg
     #- coverage run -m pytest
 
 after_success:
