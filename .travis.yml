@@ -17,10 +17,11 @@ before_install:
           #  - python setup.py install
 
 install:
-    - pip install -e .
+  - pip install -e .
 
 script:
-    - python -m pytest --color=yes
+  - coverage run -m pytest
+        #- python -m pytest --color=yes
       #    - coverage run test_generate.py
 
 codecov:
