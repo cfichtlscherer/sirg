@@ -24,7 +24,7 @@ def test_random_connected_graph_1():
     number_nodes = len(g.nodes())
     number_edges = len(g.edges())
 
-    assert (number_nodes == 50) and (number_edges == (50 * (50-1)) / 2)
+    assert (number_nodes == 50) and (number_edges == (50 * (50 - 1)) / 2)
 
 
 def test_random_connected_graph_2():
