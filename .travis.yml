@@ -12,9 +12,8 @@ branches:
 install:
   - pip install -e .[test]
 
-    #script:
-    #- python -m pytest --color=yes --cov=sirg
-    #- coverage run -m pytest
+script:
+  - python -m pytest --color=yes --cov=sirg
 
 after_success:
     bash <(curl -s https://codecov.io/bash)
