@@ -8,12 +8,11 @@ import git as git
 import time as time
 
 
-
 def archivist(function):
     def wrapper(*args, **kwargs):
-        
+
         results = function(*args, **kwargs)
-        
+
         repo = git.Repo(search_parent_directories=True)
         sha = repo.head.object.hexsha[:10]
 

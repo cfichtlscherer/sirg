@@ -32,11 +32,3 @@ def density(G):
     density = edges / nodes
 
     return density
-
-
-
-
-
-
-
-
